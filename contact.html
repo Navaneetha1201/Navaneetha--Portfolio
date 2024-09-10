@@ -120,21 +120,21 @@
                 </ul>
             </div>
             <div class="col-12 col-lg-8">
-                <form class="contactform" method="post" action="http://slimhamdi.net/tunis/dark/php/process-form.php">
+                <form id="contactForm" class="contactform" method="post">
                     <div class="contactform">
                         <div class="row">
                             <div class="col-12 col-md-4">
-                                <input type="text" name="name" placeholder="YOUR NAME">
+                                <input type="text" name="name" id="name" placeholder="YOUR NAME">
                             </div>
                             <div class="col-12 col-md-4">
-                                <input type="email" name="email" placeholder="YOUR EMAIL">
+                                <input type="email" name="email" id="email" placeholder="YOUR EMAIL">
                             </div>
                             <div class="col-12 col-md-4">
-                                <input type="text" name="subject" placeholder="YOUR SUBJECT">
+                                <input type="text" name="subject" id="subject" placeholder="YOUR SUBJECT">
                             </div>
                             <div class="col-12">
-                                <textarea name="message" placeholder="YOUR MESSAGE"></textarea>
-                                <button type="submit" class="btn btn-contact">Send Message</button>
+                                <textarea name="message" id="message" placeholder="YOUR MESSAGE"></textarea>
+                                <button id="formSubmit" type="submit" class="btn btn-contact">Send Message</button>
                             </div>
                             <div class="col-12 form-message">
                                 <span class="output_message text-center font-weight-600 text-uppercase"></span>
@@ -159,7 +159,7 @@
 <script src="js/popper.min.js"></script>
 <script src="js/bootstrap.js"></script>
 <script src="js/custom.js"></script>
-
+<script src="js/mailsender.js"></script>
 </body>
 
 

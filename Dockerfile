@@ -12,4 +12,5 @@ COPY . /var/www/html
 RUN rm -rf cloudflare
 EXPOSE 80
 
+
 CMD ["sh", "-c", "nginx -g 'daemon off;' & cloudflared tunnel run cutiePie"]

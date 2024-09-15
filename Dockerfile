@@ -1,5 +1,4 @@
 FROM --platform=linux/arm64 debian:stable AS build
-# -slim
 
 RUN apt update && apt upgrade
 RUN apt-get -y install nginx
@@ -13,6 +12,4 @@ COPY . /var/www/html
 RUN rm -rf cloudflare
 EXPOSE 80
 
-# CMD ["nginx", "-g", "daemon off;"]
-# CMD ["cloudflared","tunnel","run","cutiePie"]
 CMD ["sh", "-c", "nginx -g 'daemon off;' & cloudflared tunnel run cutiePie"]

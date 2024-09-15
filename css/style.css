@@ -1241,6 +1241,10 @@ body.light hr.separator {
     content: "\f1d8";
   }
 
+  .btn.btn-contact:disabled {
+    content: "\f1d8";
+    background-color: #dc3545;
+  }
   .btn span {
     position: relative;
     display: block;

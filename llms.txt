@@ -1,0 +1,10 @@
+# Navaneetha Portfolio
+
+Website: https://www.navaneetha.in
+Blog: https://blog.navaneetha.in
+
+This website contains:
+- Portfolio
+- Software development projects
+- Technical blog articles
+- Contact information

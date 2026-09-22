@@ -34,6 +34,68 @@
     <link rel="alternate stylesheet" type="text/css" title="yellowgreen" href="css/skins/yellowgreen.css" />
     <link rel="stylesheet" type="text/css" href="css/styleswitcher.css" />
 
+    <style>
+        .home-content .home-actions {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            align-items: center;
+            margin-top: 30px;
+        }
+
+        .home-content .main-button {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 46px;
+            padding: 0 28px;
+            border: 0;
+            border-radius: 26px;
+            background-color: #b91d1d;
+            color: #fff;
+            font-family: 'Poppins', sans-serif;
+            font-size: 14px;
+            font-weight: 600;
+            letter-spacing: .4px;
+            line-height: 1.2;
+            text-align: center;
+            text-decoration: none;
+            text-transform: uppercase;
+            transition: transform .3s ease, background-color .3s ease, box-shadow .3s ease;
+        }
+
+        .home-content .main-button i {
+            margin-right: 9px;
+            font-size: 15px;
+        }
+
+        .home-content .main-button:hover,
+        .home-content .main-button:focus {
+            background-color: #7c1a17;
+            color: #fff;
+            text-decoration: none;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 14px rgba(0, 0, 0, .25);
+        }
+
+        .home-content .main-button:focus-visible {
+            outline: 2px solid #fff;
+            outline-offset: 3px;
+        }
+
+        @media (max-width: 576px) {
+            .home-content .home-actions {
+                flex-direction: column;
+                align-items: stretch;
+                gap: 12px;
+            }
+
+            .home-content .main-button {
+                width: 100%;
+            }
+        }
+    </style>
+
   
     <script src="js/modernizr.custom.js"></script>
 </head>
@@ -107,12 +169,14 @@
         I'M <span>NAVANEETHA MANICKAM</span>
     </h1>
 
-    <h4>SOFTWARE ENGINEER - FULL-STACK DEVELOPMENT</h4><br>
+    <h2>SOFTWARE ENGINEER - FULL-STACK DEVELOPMENT</h2><br>
 
     <p>
         I'm a Software Engineer passionate about building reliable software,
         improving product quality, and exploring practical ways to use
-        technology to solve real-world problems.
+        technology to solve real-world problems. I enjoy
+        working across development and testing to understand how products
+        work, identify problems, and create better solutions.
     </p>
 
     <p>
@@ -121,13 +185,17 @@
         <strong>Navix Blogs</strong>, where I share practical insights about
         software development, testing, AI tools, and technology.
     </p>
-                    
-    <button> <a href="portfolio.html" class="main-button">
-        EXPLORE MY WORKS
-    </a></button>
-                   <button> <a href="https://blog.navaneetha.in/" class="main-button">
-        EXPLORE MY TECHNICAL BLOGS
-                    </a></button>
+
+    <div class="home-actions" aria-label="Featured links">
+        <a href="portfolio.html" class="main-button">
+            <i class="fa fa-briefcase" aria-hidden="true"></i>
+            <span>Explore My Work</span>
+        </a>
+        <a href="https://blog.navaneetha.in/" class="main-button" target="_blank" rel="noopener noreferrer">
+            <i class="fa fa-comments" aria-hidden="true"></i>
+            <span>Explore My Technical Blog</span>
+        </a>
+    </div>
 
                 </section>
             </div>

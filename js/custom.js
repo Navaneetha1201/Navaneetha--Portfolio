@@ -19,18 +19,18 @@
 
 	$(document).ready(function() {
 
-		/* ----------------------------------------------------------- */
-		/*  SHOW THE PROFILE IMAGE ON THE DESKTOP HOME PAGE
-        /* ----------------------------------------------------------- */
+		// /* ----------------------------------------------------------- */
+		// /*  SHOW THE PROFILE IMAGE ON THE DESKTOP HOME PAGE
+  //       /* ----------------------------------------------------------- */
 
-		if ($('body.home').length && window.matchMedia('(min-width: 992px)').matches) {
-			var desktopImage = $('<img>', {
-				'class': 'desktop-home-image',
-				src: 'Nava.jpg',
-				alt: 'Navaneetha Manickam'
-			});
-			$('.home-content').before(desktopImage);
-		}
+		// if ($('body.home').length && window.matchMedia('(min-width: 992px)').matches) {
+		// 	var desktopImage = $('<img>', {
+		// 		'class': 'desktop-home-image',
+		// 		src: 'Nava.jpg',
+		// 		alt: 'Navaneetha Manickam'
+		// 	});
+		// 	$('.home-content').before(desktopImage);
+		// }
 
 		/* ----------------------------------------------------------- */
 		/*  STOP VIDEOS

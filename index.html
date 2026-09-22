@@ -6,22 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="google-adsense-account" content="ca-pub-4276474402375202">
 
-   
     <link href="https://fonts.googleapis.com/css?family=Poppins:400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i,600,600i,700" rel="stylesheet">
-
-    
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/preloader.min.css" rel="stylesheet">
     <link href="css/circle.css" rel="stylesheet">
     <link href="css/font-awesome.min.css" rel="stylesheet">
     <link href="css/fm.revealator.jquery.min.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
-
- 
     <link href="css/skins/yellow.css" rel="stylesheet">
-
-    
     <link rel="alternate stylesheet" type="text/css" title="blue" href="css/skins/blue.css" />
     <link rel="alternate stylesheet" type="text/css" title="green" href="css/skins/green.css" />
     <link rel="alternate stylesheet" type="text/css" title="yellow" href="css/skins/yellow.css" />
@@ -35,6 +28,14 @@
     <link rel="stylesheet" type="text/css" href="css/styleswitcher.css" />
 
     <style>
+        /* Keep the complete home content reachable on desktop screens. */
+        @media (min-width: 992px) {
+            body.home { overflow-x: hidden; overflow-y: auto; }
+            body.home .container-home { min-height: 100vh; height: auto; }
+            body.home .home-details-container { min-height: 100vh; height: auto; padding: 70px 0; }
+            body.home .bg { background-image: url('Nava.jpg') !important; }
+        }
+
         .home-content .home-actions {
             display: flex;
             flex-wrap: wrap;
@@ -42,7 +43,6 @@
             align-items: center;
             margin-top: 30px;
         }
-
         .home-content .main-button {
             display: inline-flex;
             align-items: center;
@@ -63,12 +63,7 @@
             text-transform: uppercase;
             transition: transform .3s ease, background-color .3s ease, box-shadow .3s ease;
         }
-
-        .home-content .main-button i {
-            margin-right: 9px;
-            font-size: 15px;
-        }
-
+        .home-content .main-button i { margin-right: 9px; font-size: 15px; }
         .home-content .main-button:hover,
         .home-content .main-button:focus {
             background-color: #7c1a17;
@@ -77,72 +72,27 @@
             transform: translateY(-2px);
             box-shadow: 0 6px 14px rgba(0, 0, 0, .25);
         }
-
-        .home-content .main-button:focus-visible {
-            outline: 2px solid #fff;
-            outline-offset: 3px;
-        }
-
+        .home-content .main-button:focus-visible { outline: 2px solid #fff; outline-offset: 3px; }
         @media (max-width: 576px) {
-            .home-content .home-actions {
-                flex-direction: column;
-                align-items: stretch;
-                gap: 12px;
-            }
-
-            .home-content .main-button {
-                width: 100%;
-            }
+            .home-content .home-actions { flex-direction: column; align-items: stretch; gap: 12px; }
+            .home-content .main-button { width: 100%; }
         }
     </style>
-
-  
     <script src="js/modernizr.custom.js"></script>
 </head>
 
 <body class="home" style="background-image: url('https://th.bing.com/th/id/OIP.JmPzmHtTinzmSn4ZFePybQHaEK?w=290&h=180&c=7&r=0&o=5&dpr=1.5&pid=1.7');">
-
 <header class="header" id="navbar-collapse-toggle">
-
     <ul class="icon-menu d-none d-lg-block revealator-slideup revealator-once revealator-delay1">
-        <li class="icon-box active">
-            <i class="fa fa-home"></i>
-            <a href="index.html">
-                <h2>Home</h2>
-            </a>
-        </li>
-        <li class="icon-box">
-            <i class="fa fa-user"></i>
-            <a href="about.html">
-                <h2>About</h2>
-            </a>
-        </li>
-        <li class="icon-box">
-            <i class="fa fa-briefcase"></i>
-            <a href="portfolio.html">
-                <h2>Portfolio</h2>
-            </a>
-        </li>
-        <li class="icon-box">
-            <i class="fa fa-envelope-open"></i>
-            <a href="contact.html">
-                <h2>Contact</h2>
-            </a>
-        </li>
-        <li class="icon-box">
-            <i class="fa fa-comments"></i>
-            <a href="https://blog.navaneetha.in/">
-                <h2>Blog</h2>
-            </a>
-        </li>
+        <li class="icon-box active"><i class="fa fa-home"></i><a href="index.html"><h2>Home</h2></a></li>
+        <li class="icon-box"><i class="fa fa-user"></i><a href="about.html"><h2>About</h2></a></li>
+        <li class="icon-box"><i class="fa fa-briefcase"></i><a href="portfolio.html"><h2>Portfolio</h2></a></li>
+        <li class="icon-box"><i class="fa fa-envelope-open"></i><a href="contact.html"><h2>Contact</h2></a></li>
+        <li class="icon-box"><i class="fa fa-comments"></i><a href="https://blog.navaneetha.in/"><h2>Blog</h2></a></li>
     </ul>
-    
     <nav role="navigation" class="d-block d-lg-none">
         <div id="menuToggle">
-            <input type="checkbox" />
-            <span></span>
-            <span></span>
-            <span></span>
+            <input type="checkbox" /><span></span><span></span><span></span>
             <ul class="list-unstyled" id="menu">
                 <li class="active"><a href="index.html"><i class="fa fa-home"></i><span>Home</span></a></li>
                 <li><a href="about.html"><i class="fa fa-user"></i><span>About</span></a></li>
@@ -160,47 +110,18 @@
         <div class="col-lg-4 bg position-fixed d-none d-lg-block"></div>
         <div class="col-12 col-lg-8 offset-lg-4 home-details text-left text-sm-center text-lg-left">
             <div>
-                <img src="/Nava.jpg"  class="img-fluid main-img-mobile d-none d-sm-block d-lg-none" alt="my picture" width="100" height="20%" />
+                <img src="Nava.jpg" class="img-fluid main-img-mobile d-none d-sm-block d-lg-none" alt="my picture" width="100" height="20%" />
                 <section class="home-content">
-
-    <p class="intro">HI THERE!</p>
-
-    <h1>
-        I'M <span>NAVANEETHA MANICKAM</span>
-    </h1>
-
-    <h2>SOFTWARE ENGINEER - FULL-STACK DEVELOPMENT</h2><br>
-
-    <p>
-        I'm a Software Engineer passionate about building reliable software,
-        improving product quality, and exploring practical ways to use
-        technology to solve real-world problems. I enjoy
-        working across development and testing to understand how products
-        work, identify problems, and create better solutions.
-    </p>
-
-    <p>
-        Beyond my professional work, I document my learning, technical
-        experiments, and developer experiences through
-        <strong>Navix Blogs</strong>, where I share practical insights about
-        software development, testing, AI tools, and technology.
-    </p>
-
-    <div class="home-actions" aria-label="Featured links">
-        <a href="about.html" class="main-button">
-            <i class="fa fa-briefcase" aria-hidden="true"></i>
-            <span>Explore My Works</span>
-        </a>
-        <a href="https://blog.navaneetha.in/" class="main-button" target="_blank" rel="noopener noreferrer">
-            <i class="fa fa-comments" aria-hidden="true"></i>
-            <span>Explore My Technical Blogs</span>
-        </a>
-        <a href="portfolio.html" class="main-button" target="_blank" rel="noopener noreferrer">
-            <i class="fa fa-certificate" aria-hidden="true"></i>
-            <span>Explore My Achievements</span>
-        </a>
-    </div>
-
+                    <p class="intro">HI THERE!</p>
+                    <h1>I'M <span>NAVANEETHA MANICKAM</span></h1>
+                    <h2>SOFTWARE ENGINEER - FULL-STACK DEVELOPMENT</h2><br>
+                    <p>I'm a Software Engineer passionate about building reliable software, improving product quality, and exploring practical ways to use technology to solve real-world problems. I enjoy working across development and testing to understand how products work, identify problems, and create better solutions.</p>
+                    <p>Beyond my professional work, I document my learning, technical experiments, and developer experiences through <strong>Navix Blogs</strong>, where I share practical insights about software development, testing, AI tools, and technology.</p>
+                    <div class="home-actions" aria-label="Featured links">
+                        <a href="about.html" class="main-button"><i class="fa fa-briefcase" aria-hidden="true"></i><span>Explore My Works</span></a>
+                        <a href="https://blog.navaneetha.in/" class="main-button" target="_blank" rel="noopener noreferrer"><i class="fa fa-comments" aria-hidden="true"></i><span>Explore My Technical Blogs</span></a>
+                        <a href="portfolio.html" class="main-button" target="_blank" rel="noopener noreferrer"><i class="fa fa-certificate" aria-hidden="true"></i><span>Explore My Achievements</span></a>
+                    </div>
                 </section>
             </div>
         </div>
@@ -218,7 +139,5 @@
 <script src="js/popper.min.js"></script>
 <script src="js/bootstrap.js"></script>
 <script src="js/custom.js"></script>
-
 </body>
-
 </html>

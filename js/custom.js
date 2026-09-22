@@ -57,6 +57,24 @@
 		if ($('body.portfolio').length) {
 			$('.grid-gallery').prepend('<p class="portfolio-click-guide" role="status"><i class="fa fa-hand-pointer-o" aria-hidden="true"></i> Click any image to open its achievement details.</p>');
 			$('.grid figure').attr('title', 'Click to open achievement details');
+
+			// Give immediate feedback while the image details are opening.
+			$('.grid').on('click', 'img', function() {
+				var achievement = $(this).siblings('div').find('span').first().text().trim();
+				var message = achievement ? 'Opening details for: ' + achievement : 'Opening achievement details';
+				var $notice = $('#portfolio-click-notice');
+
+				if (!$notice.length) {
+					$notice = $('<div>', {
+						id: 'portfolio-click-notice',
+						'class': 'portfolio-click-notice',
+						role: 'status',
+						'aria-live': 'polite'
+					}).appendTo('body');
+				}
+
+				$notice.stop(true, true).text(message).fadeIn(150).delay(1400).fadeOut(300);
+			});
 		}
 
 		/* ----------------------------------------------------------- */
